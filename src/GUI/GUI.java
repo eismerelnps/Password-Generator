@@ -17,6 +17,7 @@ public class GUI {
     private JRadioButton minCharsRadioButton;
     private JRadioButton numbersCharsRadioButton;
     private JRadioButton specialCharsRadioButton;
+    private JButton button1;
     Generator generator = new Generator();
 
     public GUI() {
@@ -25,7 +26,7 @@ public class GUI {
         setCharsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (Integer.parseInt(lengthTextField.getText()) <= 4 || Integer.parseInt(lengthTextField.getText()) > 120){
+                if (Integer.parseInt(lengthTextField.getText()) <= 4 || Integer.parseInt(lengthTextField.getText()) > 120) {
                     JOptionPane.showMessageDialog(null,
                             "For security set e length between 4 and 120 characters ",
                             "",
@@ -38,13 +39,14 @@ public class GUI {
                             "",
                             2,
                             null);
-                } else
+                } else {
                     generator.setOptions(Integer.parseInt(lengthTextField.getText()), capitalCharsRadioButton.isSelected(), minCharsRadioButton.isSelected(), numbersCharsRadioButton.isSelected(), specialCharsRadioButton.isSelected());
-                JOptionPane.showMessageDialog(null,
-                        generator.Generate(),
-                        "",
-                        2,
-                        null);
+                    JOptionPane.showMessageDialog(null,
+                            generator.generate(Integer.parseInt(lengthTextField.getText())),
+                            "",
+                            2,
+                            null);
+                }
             }
         });
         generateButton.addActionListener(new ActionListener() {
@@ -61,6 +63,7 @@ public class GUI {
 
             }
         });
+
     }
 
     public void StartGUI() {

@@ -1,17 +1,17 @@
 package Control;
 
-import java.util.ArrayList;
+import java.util.Random;
 
 public class Generator {
-    static int passwordLength = 0;
-    //static char[] password ;
-    String finalPassword;
     static boolean capitalChars = false;
     static boolean minChars = false;
     static boolean numbers = false;
     static boolean specialChar = false;
     static Character character = new Character();
-    static ArrayList<char[]> arrayOfChars ;
+    static int passwordLength = 0;//longitud o cantidad de caracteres que tendrá la contraseña
+    static char[] arrayOfChar;
+    String finalPassword;
+    //static ArrayList<char[]> arrayOfChars ;
 
     public static boolean isCapitalChars() {
         return capitalChars;
@@ -30,49 +30,37 @@ public class Generator {
     }
 
 
-
-    public void setOptions(int length, boolean cap, boolean min, boolean num, boolean special){
+    public void setOptions(int length, boolean cap, boolean min, boolean num, boolean special) {
         passwordLength = length;
         capitalChars = cap;
         minChars = min;
         numbers = num;
         specialChar = special;
-        setArrayOfChar();
+
+        generate(length);
     }//función para definir la cantidad de caracteres que va a tener la contrasena asi como definir si contendra letras mayusculas, minusculas, numeros o caracteres especiales
-    public void setArrayOfChar() {
-        for (int i = 0; i < passwordLength; i++) {
-            if (isCapitalChars()) {
-               arrayOfChars.set(i, character.getCapitalChars());
-            } else if (isMinChars()) {
-                arrayOfChars.add(character.getMinChars());
-            } else if (isNumbers()) {
-                arrayOfChars.add(character.getNumbers());
-            } else if (isSpecialChar()) {
-                arrayOfChars.add(character.getEspecialChars());
-            }
+
+    public String generate(int length) {
+        StringBuilder password = new StringBuilder(length);
+        Random random = new Random(System.nanoTime());
+        StringBuilder charCategories = new StringBuilder();
+        if (minChars) {
+            charCategories.append(character.getMinChars());
         }
+        if (capitalChars) {
+            charCategories.append(character.getCapitalChars());
+        }
+        if (numbers) {
+            charCategories.append(character.getNumbers());
+        }
+        if (specialChar) {
+            charCategories.append(character.getEspecialChars());
+        }
+        for (int i = 0; i < length; i++) {
+            password.append(charCategories.charAt(random.nextInt(charCategories.length())));
+        }
+        return new String(password);
     }
-    public static String Generate(){
-        char[] password = new char[passwordLength];
-        String finalPassword = null;
-        int indexRandom = 0 ;
 
-        for (int i = 0; i<passwordLength; i++){
-            indexRandom = (int) (Math.random()*25);
-
-            System.out.println(indexRandom);
-
-            char[] character;
-            character = arrayOfChars.get(i);
-            password[i] = character[i];
-
-        }
-        System.out.println("Lenght:"+passwordLength);
-        System.out.println(password );
-
-        for (int i = 0; i < password.length; i++){
-            finalPassword += String.valueOf(password[i]);
-        }
-        return finalPassword;
-    }
 }
+
