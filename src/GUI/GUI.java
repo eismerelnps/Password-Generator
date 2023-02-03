@@ -6,6 +6,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class GUI {
     private JPanel mainPanel;
@@ -20,15 +22,16 @@ public class GUI {
     private JLabel passwordJLabel;
     private JTextArea passwordTextArea;
     private JButton copyButton;
+    private JSlider slider1;
     Generator generator = new Generator();
 
     public GUI() {
-        setOptionsPanel.setVisible(false);
         capitalCharsRadioButton.setSelected(true);
 
         setCharsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                lengthTextField.setText(String.valueOf(slider1.getValue()));
                 if (lengthTextField.getText().isEmpty()){
                     JOptionPane.showMessageDialog(null,
                             "Please set a length first ",
@@ -49,34 +52,33 @@ public class GUI {
                             null);
                 } else {
                     generator.setOptions(Integer.parseInt(lengthTextField.getText()), capitalCharsRadioButton.isSelected(), minCharsRadioButton.isSelected(), numbersCharsRadioButton.isSelected(), specialCharsRadioButton.isSelected());
+
                     passwordJLabel.setText(generator.generate(Integer.parseInt(lengthTextField.getText())));
                 }
             }
         });
-        generateButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setOptionsPanel.setVisible(true);
-                JOptionPane.showOptionDialog(null,
-                        setOptionsPanel,
-                        "",
-                        JOptionPane.DEFAULT_OPTION,
-                        -1,
-                        null, new Object[]{},
-                        null);
 
+
+
+
+        slider1.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentMoved(ComponentEvent e) {
+                super.componentMoved(e);
+                lengthTextField.setText(String.valueOf(slider1.getValue()));
             }
         });
-
+        slider1.addComponentListener(new ComponentAdapter() {
+        });
     }
 
     public void StartGUI() {
         JFrame window = new JFrame("PetShop");
         window.setContentPane(new GUI().mainPanel);
         window.pack();
-        window.setBounds(300, 150, 1000, 515);
+        window.setBounds(300, 150, 500, 250);
         window.setVisible(true);
-        window.setMinimumSize(new Dimension(1106, 507));
+        window.setMinimumSize(new Dimension(250, 250));
         window.setBackground(Color.darkGray);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }

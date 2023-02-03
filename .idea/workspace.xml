@@ -82,7 +82,7 @@
       <workItem from="1675047826001" duration="90000" />
       <workItem from="1675115449958" duration="4457000" />
       <workItem from="1675310423664" duration="1148000" />
-      <workItem from="1675363212421" duration="9044000" />
+      <workItem from="1675363212421" duration="11107000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit of Pasword GEnerator">
       <created>1675310478909</created>
@@ -119,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675392675233</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Working till now">
+      <created>1675393476866</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675393476866</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
