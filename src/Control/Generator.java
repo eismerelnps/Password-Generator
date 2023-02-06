@@ -1,17 +1,20 @@
 package Control;
 
+import java.net.URI;
+import java.security.KeyStore;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Generator {
+    Login login;
+    ArrayList<Login> loginArrayList = new ArrayList<>();
     static boolean capitalChars = false;
     static boolean minChars = false;
     static boolean numbers = false;
     static boolean specialChar = false;
     static Character character = new Character();
     static int passwordLength = 0;//longitud o cantidad de caracteres que tendrá la contraseña
-    static char[] arrayOfChar;
-    String finalPassword;
-    //static ArrayList<char[]> arrayOfChars ;
+
 
     public static boolean isCapitalChars() {
         return capitalChars;
@@ -38,7 +41,7 @@ public class Generator {
         specialChar = special;
 
         generate(length);
-    }//función para definir la cantidad de caracteres que va a tener la contrasena asi como definir si contendra letras mayusculas, minusculas, numeros o caracteres especiales
+    }//funtion for setting password's length, and if it will contain Capital, min, number or spetial chars
 
     public String generate(int length) {
         StringBuilder password = new StringBuilder(length);
@@ -60,7 +63,12 @@ public class Generator {
             password.append(charCategories.charAt(random.nextInt(charCategories.length())));
         }
         return new String(password);
-    }
+    }//this funtion generates the password according to the especifications previously setted by user
+
+    public void save(String ID, String UserName, KeyStore.PasswordProtection Password, URI URL, String Notes) {
+        login = new Login(ID, UserName, Password, URL, Notes);
+        loginArrayList.add(login);
+    }//funtion for adding a new login item to the array, usesrs will be able to save login information like Name, username, URL, password and extra notes
 
 }
 
