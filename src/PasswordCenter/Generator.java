@@ -1,15 +1,9 @@
-package Control;
+package PasswordCenter;
 
-import Cards.Login;
-
-import java.net.URI;
-import java.security.KeyStore;
-import java.util.ArrayList;
 import java.util.Random;
 
 public class Generator {
-    Login login;
-    ArrayList<Login> loginArrayList = new ArrayList<>();
+
     static boolean capitalChars = false;
     static boolean minChars = false;
     static boolean numbers = false;
@@ -67,13 +61,6 @@ public class Generator {
         return new String(password);
     }//this funtion generates the password according to the especifications previously setted by user
 
-    public void save(String ID, String UserName, KeyStore.PasswordProtection Password, URI URL, String Notes) {
-        login = new Login(ID, UserName, Password, URL, Notes);
-        loginArrayList.add(login);
-    }//funtion for adding a new login item to the array, usesrs will be able to save login information like Name, username, URL, password and extra notes
 
-    public void saveCard(){
-        //method for saving credit cards on program
-    }
 }
 

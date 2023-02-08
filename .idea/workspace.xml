@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf09f427-5450-409a-a23b-f0bc9e47ca16" name="Changes" comment="working on funtion for saving Login item">
-      <change afterPath="$PROJECT_DIR$/src/Cards/Card.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cards/MatrixCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cards/PrivateCard.java" afterDir="false" />
+    <list default="true" id="cf09f427-5450-409a-a23b-f0bc9e47ca16" name="Changes" comment="working on funtion for saving Login item, adding save cards funtions">
+      <change afterPath="$PROJECT_DIR$/src/CardCenter/PartnerCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Control/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Control/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cards/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardCenter/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/MatrixCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardCenter/MatrixCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cards/PrivateCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardCenter/PrivateCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Character.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordCenter/Character.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Control/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordCenter/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +98,7 @@
       <workItem from="1675794021522" duration="429000" />
       <workItem from="1675794501580" duration="1362000" />
       <workItem from="1675795943612" duration="827000" />
-      <workItem from="1675822515726" duration="2955000" />
+      <workItem from="1675822515726" duration="6329000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit of Pasword GEnerator">
       <created>1675310478909</created>
@@ -152,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675668387624</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="working on funtion for saving Login item, adding save cards funtions">
+      <created>1675825555263</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675825555263</updated>
+    </task>
+    <task id="LOCAL-00010" summary="working on funtion for saving Login item, adding save cards funtions">
+      <created>1675825609865</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675825609865</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +191,8 @@
     <MESSAGE value="First Commit of Pasword GEnerator" />
     <MESSAGE value="Working till now" />
     <MESSAGE value="working on funtion for saving Login item" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on funtion for saving Login item" />
+    <MESSAGE value="working on funtion for saving Login item, adding save cards funtions" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on funtion for saving Login item, adding save cards funtions" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

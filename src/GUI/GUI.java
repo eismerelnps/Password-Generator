@@ -1,6 +1,6 @@
 package GUI;
 
-import Control.Generator;
+import PasswordCenter.Generator;
 
 import javax.swing.*;
 import java.awt.*;

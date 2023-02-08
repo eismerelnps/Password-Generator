@@ -1,10 +1,10 @@
-package Cards;
+package CardCenter;
 
 public class Card {
     protected String alias;//alias  of the card
     protected String brand;//it defines the card's brand, I mean Visa, MasterCard, Bandec, Metropolitano, BPA etc
-    protected String cardHolderName;//it defines the card's holder name
     protected String cardNumber;//it defines the card's number
+    protected String cardHolderName;//it defines the card's holder name
     protected String currency;//it defines the currency of the card
 
     public Card(String alias, String brand, String cardHolderName, String cardNumber, String currency) {

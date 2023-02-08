@@ -1,4 +1,4 @@
-package Cards;
+package CardCenter;
 
 public class MatrixCard {
     private String cardNumber;
