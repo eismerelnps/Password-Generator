@@ -1,5 +1,7 @@
 package Control;
 
+import Cards.Login;
+
 import java.net.URI;
 import java.security.KeyStore;
 import java.util.ArrayList;
@@ -70,5 +72,8 @@ public class Generator {
         loginArrayList.add(login);
     }//funtion for adding a new login item to the array, usesrs will be able to save login information like Name, username, URL, password and extra notes
 
+    public void saveCard(){
+        //method for saving credit cards on program
+    }
 }
 

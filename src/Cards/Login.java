@@ -1,4 +1,4 @@
-package Control;
+package Cards;
 
 import java.net.URI;
 import java.security.KeyStore.PasswordProtection;
