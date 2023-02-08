@@ -1,7 +1,7 @@
 package Cards;
 
 public class Card {
-    protected String alias;//alias name of the card
+    protected String alias;//alias  of the card
     protected String brand;//it defines the card's brand, I mean Visa, MasterCard, Bandec, Metropolitano, BPA etc
     protected String cardHolderName;//it defines the card's holder name
     protected String cardNumber;//it defines the card's number
