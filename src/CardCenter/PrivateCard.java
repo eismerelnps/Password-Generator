@@ -3,13 +3,15 @@ package CardCenter;
 import java.time.YearMonth;
 
 public class PrivateCard extends Card {
+    private String cardHolderSecondName;
+    private String cardHolderLastName;
     private String cashierPin;//pin for operanting card on cashier
     private String telePin;//pin for operating card on transfermovil
     private YearMonth expirationDate;
     private MatrixCard matrix;
 
-    public PrivateCard(CardType cardType,String alias, String brand, String cardHolderName, String cardNumber, String currenncy, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
-        super(cardType,alias, brand, cardHolderName, cardNumber, currenncy);
+    public PrivateCard(CardType cardType,String alias, Brand brand, String cardHolderName, String cardNumber, Currency currency, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
+        super(cardType,alias, brand, cardHolderName, cardNumber, currency);
         this.cashierPin = cashierPin;
         this.telePin = telePin;
         this.expirationDate = expirationDate;
