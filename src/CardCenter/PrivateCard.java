@@ -10,7 +10,9 @@ public class PrivateCard extends Card {
     private YearMonth expirationDate;
     private MatrixCard matrix;
 
-    public PrivateCard(CardType cardType,String alias, Brand brand, String cardHolderName, String cardNumber, Currency currency, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
+    public PrivateCard(CardType cardType,String alias, Brand brand, String cardHolderName,
+                       String cardNumber, Currency currency, String cashierPin, String telePin,
+                       YearMonth expirationDate, MatrixCard matrix) {
         super(cardType,alias, brand, cardHolderName, cardNumber, currency);
         this.cashierPin = cashierPin;
         this.telePin = telePin;
