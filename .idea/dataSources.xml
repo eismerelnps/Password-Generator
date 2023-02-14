@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="kugard" uuid="62765aaf-2a73-40d1-8889-efcfabe69331">
+    <data-source source="LOCAL" name="identifier.kugardDB" uuid="17f476d3-aaf5-4e45-8ec2-de2f2f49729e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:kugard</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
-    <data-source source="LOCAL" name="test.sqlite" uuid="01dd45a0-25ab-439b-a4b8-35f79e4ca400">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:test.sqlite</jdbc-url>
+      <jdbc-url>jdbc:sqlite:identifier.kugardDB</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

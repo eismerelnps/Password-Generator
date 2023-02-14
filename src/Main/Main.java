@@ -27,6 +27,23 @@ public class Main {
     public String validatePrivateCard(Card.CardType cardType, String alias, Card.Brand brand, String cardHolderName, String cardNumber, Card.Currency currency, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
         String message = "Tarjeta agregada con éxito";
         boolean pass = true;
+        char[] cardHolderNameArray = new char[cardHolderName.length()];
+
+        //converting CardHolderName to a char Array
+        for (int i = 0; i < cardHolderName.length(); i++) {
+            String letter = null;
+            cardHolderNameArray[i] = cardHolderName.charAt(i);
+            letter = String.valueOf(cardHolderNameArray[i]);
+            boolean containletter = true;
+            if (!letter.matches("[a-zA-Z]")) {
+                pass = false;
+                message = "Error al agregar. Por favor, rectifique el nombre";
+                System.out.println(letter + ":no cointain letter");
+                break;
+            }
+        }
+
+/*
         if (alias.length() > 20) {
             message = "Introduzca un alias más corto.";
             pass = false;
@@ -46,7 +63,7 @@ public class Main {
         else if (cardHolderName.matches("[a-zA-Z]+")) {
             message = "Ha introducido un nombre no válido por favor verifique.";
             pass = false;
-        }/*DOOT WORK  Cheks if cardholder name contains chars unallowed*/
+        }/*DOOT WORK  Cheks if cardholder name contains chars unallowed
         else if (brand.equals(Card.Brand.BANDEC)) {
             if (telePin.length() != 5) {
                 message = "Pin de transfermóvil incorrecto, por favor introduzca 5 dígitos";
@@ -66,19 +83,19 @@ public class Main {
         }//checks if the length for transfremovil pin of METROPOLITANO and BPA cards is different from 4
         else if (brand.equals(Card.Brand.MASTERDCARD) || brand.equals(Card.Brand.VISA) || brand.equals(Card.Brand.OTHER))
 
-        if (brand.equals(Card.Brand.MASTERDCARD) || brand.equals(Card.Brand.VISA)) {
-            if (currency.equals(Card.Currency.MLC) || currency.equals(Card.Currency.CUP)) {
-                message = "Modena no válida para esta tarjeta.";
-                pass = false;
-            }
-        } //if card belongs to MASTERCARD or VISA app won't let set currency as MLC OR CUP
-        else if (brand.equals(Card.Brand.METROPOLITANO) || brand.equals(Card.Brand.BANDEC) || brand.equals(Card.Brand.BPA)) {
-            if (currency.equals(Card.Currency.OTHER) || currency.equals(Card.Currency.USD) || currency.equals(Card.Currency.EUR)) {
-                message = "Modena no válida para esta tarjeta.";
-                pass = false;
-            }
-        }//if card belongs to METROPOLITANO, BANDEC or BPA we won't be able to set currency as USD, EUR or OTHER
-
+            if (brand.equals(Card.Brand.MASTERDCARD) || brand.equals(Card.Brand.VISA)) {
+                if (currency.equals(Card.Currency.MLC) || currency.equals(Card.Currency.CUP)) {
+                    message = "Modena no válida para esta tarjeta.";
+                    pass = false;
+                }
+            } //if card belongs to MASTERCARD or VISA app won't let set currency as MLC OR CUP
+            else if (brand.equals(Card.Brand.METROPOLITANO) || brand.equals(Card.Brand.BANDEC) || brand.equals(Card.Brand.BPA)) {
+                if (currency.equals(Card.Currency.OTHER) || currency.equals(Card.Currency.USD) || currency.equals(Card.Currency.EUR)) {
+                    message = "Modena no válida para esta tarjeta.";
+                    pass = false;
+                }
+            }//if card belongs to METROPOLITANO, BANDEC or BPA we won't be able to set currency as USD, EUR or OTHER
+*/
         if (pass == true) {
             privateCard = new PrivateCard(cardType, alias, brand, cardHolderName, cardNumber, currency, cashierPin, telePin, expirationDate, matrix);
             savePrivateCard(privateCard);

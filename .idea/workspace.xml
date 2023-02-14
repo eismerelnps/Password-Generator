@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf09f427-5450-409a-a23b-f0bc9e47ca16" name="Changes" comment="working on funtion for saving Login item, adding save cards funtions,, working on Private card validation">
+      <change afterPath="$PROJECT_DIR$/identifier.kugardDB" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.kugard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62765aaf-2a73-40d1-8889-efcfabe69331.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62765aaf-2a73-40d1-8889-efcfabe69331.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CardCenter/PrivateCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CardCenter/PrivateCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kuGARD" beforeDir="false" afterPath="$PROJECT_DIR$/kuGARD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/java/DB/SQLiteDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DB/SQLiteDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/SQLiteDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/SQLiteDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +80,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
@@ -149,7 +157,8 @@
       <workItem from="1676072170170" duration="10051000" />
       <workItem from="1676099039075" duration="156000" />
       <workItem from="1676186122091" duration="5720000" />
-      <workItem from="1676260899243" duration="2838000" />
+      <workItem from="1676260899243" duration="6113000" />
+      <workItem from="1676342664500" duration="3382000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit of Pasword GEnerator">
       <created>1675310478909</created>
@@ -242,7 +251,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676099095575</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="working on funtion for saving Login item, adding save cards funtions,, working on Private card validation">
+      <created>1676264422317</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676264422317</updated>
+    </task>
+    <task id="LOCAL-00015" summary="working on funtion for saving Login item, adding save cards funtions,, working on Private card validation">
+      <created>1676264487530</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676264487530</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
