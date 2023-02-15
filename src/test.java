@@ -21,22 +21,23 @@ public class test {
 
     public static void main(String[] args) {
 
-        System.out.println(test.validatePrivateCard(Card.CardType.PRIVATE,
+       test.validatePrivateCard(Card.CardType.PRIVATE,
                 "Tarjeta de Eismer",
                 Card.Brand.VISA,
-                "Eism9er",
+                "Eismer Loba7ina Naranjo",
                 "1234567890987654",
                 Card.Currency.EUR,
                 "8888",
                 "12341",
                 YearMonth.of(2025, Month.APRIL),
-                null ));
+                null);
 
         //testing db of private cards
-       //System.out.println(testTB.connect());
-       // testTB.insertIntoDB("privatecard", Card.CardType.PRIVATE, alias,brand,cardHolderName,cardNumber,currency,cashierPin,telePin,expirationDate, matrix);te
-    //   testTB.createTable();
-      // testTB.test();
+        //System.out.println(testTB.connect());
+        // testTB.insertIntoDB("privatecard", Card.CardType.PRIVATE, alias,brand,cardHolderName,cardNumber,currency,cashierPin,telePin,expirationDate, matrix);te
+        //testTB.createTable();
+        // testTB.test();
+        //test.checkSomeLegth("1010212145456767", '=',16);
     }
 
 }

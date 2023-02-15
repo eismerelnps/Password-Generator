@@ -24,26 +24,71 @@ public class Main {
         gui.StartGUI();
     }
 
-    public String validatePrivateCard(Card.CardType cardType, String alias, Card.Brand brand, String cardHolderName, String cardNumber, Card.Currency currency, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
-        String message = "Tarjeta agregada con éxito";
-        boolean pass = true;
-        char[] cardHolderNameArray = new char[cardHolderName.length()];
-
+    public static boolean checkLetterContain(String text, String type) {
+        boolean pass = false;
+        char[] textArray = new char[text.length()];
         //converting CardHolderName to a char Array
-        for (int i = 0; i < cardHolderName.length(); i++) {
+        for (int i = 0; i < text.length(); i++) {
             String letter = null;
-            cardHolderNameArray[i] = cardHolderName.charAt(i);
-            letter = String.valueOf(cardHolderNameArray[i]);
-            boolean containletter = true;
-            if (!letter.matches("[a-zA-Z]")) {
+            textArray[i] = text.charAt(i);
+            letter = String.valueOf(textArray[i]);
+
+            if (type == "number"){
+                if (letter.matches("\\d+")) {
+                    pass = false;
+                    System.out.println("checking for number");
+                    System.out.println(letter + ": contain");
+                    break;
+
+                } else {
+                    System.out.println(letter + ": no cont");
+                    pass =true;
+                }
+            } else if (type == "letter") {
+                if (!letter.matches("\\d+")) {
+                    pass = false;
+                    System.out.println("checking for letters");
+                    System.out.println(letter + ": contain");
+                   // break;
+
+                } else {
+                    System.out.println(letter + ": no cont");
+                    pass = true;
+                }
+            }
+
+
+        }
+        return pass;
+    }
+
+    public static boolean checkSomeLegth(String text, char operation, int length) {
+        boolean pass = true;
+        if (operation == '=') {
+            if (text.length() != length) {
                 pass = false;
-                message = "Error al agregar. Por favor, rectifique el nombre";
-                System.out.println(letter + ":no cointain letter");
-                break;
+            }
+        } else if (operation == '<') {
+            if (text.length() < length) {
+                pass = false;
+            }
+        } else if (operation == '>') {
+            if (text.length() > length) {
+                pass = false;
             }
         }
+        return pass;
+    }
 
-/*
+    public String validatePrivateCard(Card.CardType cardType, String alias, Card.Brand brand, String cardHolderName, String cardNumber, Card.Currency currency, String cashierPin, String telePin, YearMonth expirationDate, MatrixCard matrix) {
+        String message = "Tarjeta agregada con éxito";
+        boolean pass = true;//if any validator set it as false app will show an error message and won't add the card;
+
+        pass = checkLetterContain(cardHolderName, "number");//checking if cardHolderName contains any othrr chat than Cap or min letters
+        pass = checkSomeLegth(alias,'>',20);//checks if alias contains more than 20 chars
+        pass = checkSomeLegth(cardNumber, '=', 16);//checks if card number contain more or less than 16 numbers
+        pass = checkLetterContain(cardNumber, "letter");//checks if cardnumber contains other chars than number inside
+
         if (alias.length() > 20) {
             message = "Introduzca un alias más corto.";
             pass = false;
@@ -60,10 +105,6 @@ public class Main {
             message = "El pin solo debe contener números";
             pass = false;
         }//checks if pin for cashier and pi for tele-operations ocontains chars differents than numbers
-        else if (cardHolderName.matches("[a-zA-Z]+")) {
-            message = "Ha introducido un nombre no válido por favor verifique.";
-            pass = false;
-        }/*DOOT WORK  Cheks if cardholder name contains chars unallowed
         else if (brand.equals(Card.Brand.BANDEC)) {
             if (telePin.length() != 5) {
                 message = "Pin de transfermóvil incorrecto, por favor introduzca 5 dígitos";
@@ -72,7 +113,7 @@ public class Main {
 
         }//checks if the length for transfremovil pin of BANDEC cards is different from 5
         else if (cardHolderName.split("\\s").length > 4 || cardHolderName.split("\\s").length < 3) {
-            message = "Ha introducido un nombre no válido por favor verifique(cantidad de letras).";
+            message = "Error al agregar. Por favor verifique que ha introducido nombre(s) y apellidos.";
             pass = false;
         }// check how many words contain thee crdholder name if it contain less than 3 or more than 4 app will show error
         else if (brand.equals(Card.Brand.BPA) || brand.equals(Card.Brand.METROPOLITANO)) {
@@ -95,7 +136,7 @@ public class Main {
                     pass = false;
                 }
             }//if card belongs to METROPOLITANO, BANDEC or BPA we won't be able to set currency as USD, EUR or OTHER
-*/
+
         if (pass == true) {
             privateCard = new PrivateCard(cardType, alias, brand, cardHolderName, cardNumber, currency, cashierPin, telePin, expirationDate, matrix);
             savePrivateCard(privateCard);
@@ -111,6 +152,10 @@ public class Main {
                             "\nFecha de expiracion: " + expirationDate +
                             "\nMatrix asosiada: " + matrix +
                             "\n");
+            System.out.println(message);
+        }else {
+            message = "Error al agregar";
+            System.out.println(message);
         }
         return message;
     }//validating info of a private card before be aded

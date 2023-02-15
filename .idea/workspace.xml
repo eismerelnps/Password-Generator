@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf09f427-5450-409a-a23b-f0bc9e47ca16" name="Changes" comment="working on funtion for saving Login item, adding save cards funtions,, working on Private card validation">
-      <change afterPath="$PROJECT_DIR$/identifier.kugardDB" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.kugard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/62765aaf-2a73-40d1-8889-efcfabe69331.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/62765aaf-2a73-40d1-8889-efcfabe69331.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kuGARD" beforeDir="false" afterPath="$PROJECT_DIR$/kuGARD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/java/DB/SQLiteDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/java/DB/SQLiteDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/SQLiteDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/SQLiteDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -158,7 +150,7 @@
       <workItem from="1676099039075" duration="156000" />
       <workItem from="1676186122091" duration="5720000" />
       <workItem from="1676260899243" duration="6113000" />
-      <workItem from="1676342664500" duration="3382000" />
+      <workItem from="1676342664500" duration="9404000" />
     </task>
     <task id="LOCAL-00001" summary="First Commit of Pasword GEnerator">
       <created>1675310478909</created>
@@ -265,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676264487530</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="working on funtion for saving Login item, adding save cards funtions,, working on Private card validation">
+      <created>1676346333677</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676346333677</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
