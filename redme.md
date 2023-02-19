@@ -1,0 +1,1 @@
+loco que codigo mas spagetti, tas dp singao
