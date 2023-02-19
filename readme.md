@@ -1,7 +1,4 @@
-package Main;
-
-public class TODO {
-    //principio de desarrollo
+ //principio de desarrollo
     /*estoy trabajando en una aplicacion la cual se basa en principios de seguridad ,
      esta debe contener informacion acerca de tarjetas magneticas de credito: cada
      #TARJETA NORMAL:
@@ -73,23 +70,7 @@ Soporte de seguridad: La aplicación debe contar con un soporte de seguridad act
 En resumen, para garantizar la seguridad de la información de las tarjetas de crédito en la aplicación, es importante implementar medidas de seguridad efectivas y mantenerlas actualizadas regularmente.
 
 */
-
-
-
-
-
-
-
-
-
-
-
-    /*
-    *
-    *
-    *
-    *
-    *
+/  *
     *
     *
         * Validación de fecha de vencimiento: se debe verificar que la fecha de vencimiento proporcionada sea válida y no esté vencida.
@@ -103,4 +84,3 @@ En resumen, para garantizar la seguridad de la información de las tarjetas de c
           #Validación de moneda: se deben verificar que la moneda proporcionada sea válida y esté dentro del conjunto de monedas permitidas.
 
     * */
-}
